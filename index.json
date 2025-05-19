@@ -2,7 +2,7 @@
   "Cobertura/SummaryGithub.html": {
     "href": "Cobertura/SummaryGithub.html",
     "title": "Summary | EcommerceApp App",
-    "summary": "Summary Summary Generated on: 05/19/2025 - 01:56:20 Coverage date: 05/19/2025 - 01:56:18 Parser: Cobertura Assemblies: 1 Classes: 3 Files: 2 Line coverage: 42.5% (23 of 54) Covered lines: 23 Uncovered lines: 31 Coverable lines: 54 Total lines: 115 Branch coverage: 33.3% (2 of 6) Covered branches: 2 Total branches: 6 Method coverage: Feature is only available for sponsors Coverage EcommerceApp.Api - 42.5% Name Line Branch EcommerceApp.Api 42.5% 33.3% EcommerceApp.Api.Controllers.CartController 100% 100% Program 0% 0% WeatherForecast 0%"
+    "summary": "Summary Summary Generated on: 05/19/2025 - 02:06:52 Coverage date: 05/19/2025 - 02:06:50 Parser: Cobertura Assemblies: 1 Classes: 3 Files: 2 Line coverage: 42.5% (23 of 54) Covered lines: 23 Uncovered lines: 31 Coverable lines: 54 Total lines: 115 Branch coverage: 33.3% (2 of 6) Covered branches: 2 Total branches: 6 Method coverage: Feature is only available for sponsors Coverage EcommerceApp.Api - 42.5% Name Line Branch EcommerceApp.Api 42.5% 33.3% EcommerceApp.Api.Controllers.CartController 100% 100% Program 0% 0% WeatherForecast 0%"
   },
   "clases.html": {
     "href": "clases.html",
