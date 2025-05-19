@@ -1,0 +1,87 @@
+{
+  "Cobertura/SummaryGithub.html": {
+    "href": "Cobertura/SummaryGithub.html",
+    "title": "Summary | EcommerceApp App",
+    "summary": "Summary Summary Generated on: 05/19/2025 - 01:56:20 Coverage date: 05/19/2025 - 01:56:18 Parser: Cobertura Assemblies: 1 Classes: 3 Files: 2 Line coverage: 42.5% (23 of 54) Covered lines: 23 Uncovered lines: 31 Coverable lines: 54 Total lines: 115 Branch coverage: 33.3% (2 of 6) Covered branches: 2 Total branches: 6 Method coverage: Feature is only available for sponsors Coverage EcommerceApp.Api - 42.5% Name Line Branch EcommerceApp.Api 42.5% 33.3% EcommerceApp.Api.Controllers.CartController 100% 100% Program 0% 0% WeatherForecast 0%"
+  },
+  "clases.html": {
+    "href": "clases.html",
+    "title": "| EcommerceApp App",
+    "summary": "classDiagram class ICartService ICartService : +Total() Double ICartService : +Items() IEnumerable~ICartItem~ class IDiscountService IDiscountService : +ApplyDiscount() Double class IPaymentService IPaymentService : +Charge() Boolean class IShipmentService IShipmentService : +Ship() Void class IAddressInfo IAddressInfo : +String Street IAddressInfo : +String Address IAddressInfo : +String City IAddressInfo : +String PostalCode IAddressInfo : +String PhoneNumber class ICard ICard : +String CardNumber ICard : +String Name ICard : +DateTime ValidTo class ICartItem ICartItem : +String ProductId ICartItem : +Int Quantity ICartItem : +Double Price class CartController CartController : +CheckOut() String"
+  },
+  "docs/EcommerceApp.Api.Controllers.CartController.html": {
+    "href": "docs/EcommerceApp.Api.Controllers.CartController.html",
+    "title": "Class CartController | EcommerceApp App",
+    "summary": "Class CartController Namespace EcommerceApp.Api.Controllers Assembly EcommerceApp.Api.dll Controlador para procesar operaciones del carrito. [ApiController] [Route(\"[controller]\")] public class CartController Inheritance object CartController Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors CartController(ICartService, IPaymentService, IShipmentService, IDiscountService) Constructor del CartController. public CartController(ICartService cartService, IPaymentService paymentService, IShipmentService shipmentService, IDiscountService discountService) Parameters cartService ICartService paymentService IPaymentService shipmentService IShipmentService discountService IDiscountService Methods CheckOut(ICard, IAddressInfo) Ejecuta el proceso de checkout con pago y envío. [HttpPost] public string CheckOut(ICard card, IAddressInfo addressInfo) Parameters card ICard Datos de la tarjeta addressInfo IAddressInfo Datos de dirección Returns string Resultado del proceso"
+  },
+  "docs/EcommerceApp.Api.Controllers.html": {
+    "href": "docs/EcommerceApp.Api.Controllers.html",
+    "title": "Namespace EcommerceApp.Api.Controllers | EcommerceApp App",
+    "summary": "Namespace EcommerceApp.Api.Controllers Classes CartController Controlador para procesar operaciones del carrito."
+  },
+  "docs/EcommerceApp.Api.Models.IAddressInfo.html": {
+    "href": "docs/EcommerceApp.Api.Models.IAddressInfo.html",
+    "title": "Interface IAddressInfo | EcommerceApp App",
+    "summary": "Interface IAddressInfo Namespace EcommerceApp.Api.Models Assembly EcommerceApp.Api.dll public interface IAddressInfo Properties Address string Address { get; set; } Property Value string City string City { get; set; } Property Value string PhoneNumber string PhoneNumber { get; set; } Property Value string PostalCode string PostalCode { get; set; } Property Value string Street string Street { get; set; } Property Value string"
+  },
+  "docs/EcommerceApp.Api.Models.ICard.html": {
+    "href": "docs/EcommerceApp.Api.Models.ICard.html",
+    "title": "Interface ICard | EcommerceApp App",
+    "summary": "Interface ICard Namespace EcommerceApp.Api.Models Assembly EcommerceApp.Api.dll public interface ICard Properties CardNumber string CardNumber { get; set; } Property Value string Name string Name { get; set; } Property Value string ValidTo DateTime ValidTo { get; set; } Property Value DateTime"
+  },
+  "docs/EcommerceApp.Api.Models.ICartItem.html": {
+    "href": "docs/EcommerceApp.Api.Models.ICartItem.html",
+    "title": "Interface ICartItem | EcommerceApp App",
+    "summary": "Interface ICartItem Namespace EcommerceApp.Api.Models Assembly EcommerceApp.Api.dll public interface ICartItem Properties Price double Price { get; set; } Property Value double ProductId string ProductId { get; set; } Property Value string Quantity int Quantity { get; set; } Property Value int"
+  },
+  "docs/EcommerceApp.Api.Models.html": {
+    "href": "docs/EcommerceApp.Api.Models.html",
+    "title": "Namespace EcommerceApp.Api.Models | EcommerceApp App",
+    "summary": "Namespace EcommerceApp.Api.Models Interfaces IAddressInfo ICard ICartItem"
+  },
+  "docs/EcommerceApp.Api.Services.ICartService.html": {
+    "href": "docs/EcommerceApp.Api.Services.ICartService.html",
+    "title": "Interface ICartService | EcommerceApp App",
+    "summary": "Interface ICartService Namespace EcommerceApp.Api.Services Assembly EcommerceApp.Api.dll public interface ICartService Methods Items() IEnumerable<ICartItem> Items() Returns IEnumerable<ICartItem> Total() double Total() Returns double"
+  },
+  "docs/EcommerceApp.Api.Services.IDiscountService.html": {
+    "href": "docs/EcommerceApp.Api.Services.IDiscountService.html",
+    "title": "Interface IDiscountService | EcommerceApp App",
+    "summary": "Interface IDiscountService Namespace EcommerceApp.Api.Services Assembly EcommerceApp.Api.dll public interface IDiscountService Methods ApplyDiscount(double) double ApplyDiscount(double total) Parameters total double Returns double"
+  },
+  "docs/EcommerceApp.Api.Services.IPaymentService.html": {
+    "href": "docs/EcommerceApp.Api.Services.IPaymentService.html",
+    "title": "Interface IPaymentService | EcommerceApp App",
+    "summary": "Interface IPaymentService Namespace EcommerceApp.Api.Services Assembly EcommerceApp.Api.dll public interface IPaymentService Methods Charge(double, ICard) bool Charge(double total, ICard card) Parameters total double card ICard Returns bool"
+  },
+  "docs/EcommerceApp.Api.Services.IShipmentService.html": {
+    "href": "docs/EcommerceApp.Api.Services.IShipmentService.html",
+    "title": "Interface IShipmentService | EcommerceApp App",
+    "summary": "Interface IShipmentService Namespace EcommerceApp.Api.Services Assembly EcommerceApp.Api.dll public interface IShipmentService Methods Ship(IAddressInfo, IEnumerable<ICartItem>) void Ship(IAddressInfo info, IEnumerable<ICartItem> items) Parameters info IAddressInfo items IEnumerable<ICartItem>"
+  },
+  "docs/EcommerceApp.Api.Services.html": {
+    "href": "docs/EcommerceApp.Api.Services.html",
+    "title": "Namespace EcommerceApp.Api.Services | EcommerceApp App",
+    "summary": "Namespace EcommerceApp.Api.Services Interfaces ICartService IDiscountService IPaymentService IShipmentService"
+  },
+  "docs/EcommerceApp.Tests.ControllerTests.html": {
+    "href": "docs/EcommerceApp.Tests.ControllerTests.html",
+    "title": "Class ControllerTests | EcommerceApp App",
+    "summary": "Class ControllerTests Namespace EcommerceApp.Tests Assembly EcommerceApp.Tests.dll public class ControllerTests Inheritance object ControllerTests Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods CheckOut_WithDiscountService_ReturnsExpectedResult(double, double, bool, string) [TestCase(new object?[] { 100, 10, true, \"charged\" })] [TestCase(new object?[] { 100, 10, false, \"not charged\" })] public void CheckOut_WithDiscountService_ReturnsExpectedResult(double total, double discount, bool chargeResult, string expected) Parameters total double discount double chargeResult bool expected string Setup() [SetUp] public void Setup() ShouldReturnCharged() [Test] public void ShouldReturnCharged() ShouldReturnNotCharged() [Test] public void ShouldReturnNotCharged()"
+  },
+  "docs/EcommerceApp.Tests.Tests.html": {
+    "href": "docs/EcommerceApp.Tests.Tests.html",
+    "title": "Class Tests | EcommerceApp App",
+    "summary": "Class Tests Namespace EcommerceApp.Tests Assembly EcommerceApp.Tests.dll public class Tests Inheritance object Tests Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Setup() [SetUp] public void Setup() Test1() [Test] public void Test1()"
+  },
+  "docs/EcommerceApp.Tests.html": {
+    "href": "docs/EcommerceApp.Tests.html",
+    "title": "Namespace EcommerceApp.Tests | EcommerceApp App",
+    "summary": "Namespace EcommerceApp.Tests Classes ControllerTests Tests"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE. | EcommerceApp App",
+    "summary": "This is the HOMEPAGE. Pruebas HTML Diagrama de Clases Pruebas Markdown"
+  }
+}
