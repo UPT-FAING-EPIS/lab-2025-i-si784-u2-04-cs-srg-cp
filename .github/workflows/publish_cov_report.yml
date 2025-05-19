@@ -1,0 +1,33 @@
+name: Actividad - 4 | Test unitarias y Reporte de Cobertura 
+env:
+  DOTNET_VERSION: '8.0' # la versión de .NET
+on: push
+
+jobs:
+  test-and-publish-coverage:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Configurando la versión de NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+    - name: Restore dependencies & Run tests with coverage
+      run: |
+        cd EcommerceApp
+        dotnet restore
+        dotnet test --collect:"XPlat Code Coverage"
+    - name: Install ReportGenerator
+      run: dotnet tool install -g dotnet-reportgenerator-globaltool
+    - name: Generate coverage Report
+      run: |
+        cd EcommerceApp
+        reportgenerator "-reports:./*/*/*/coverage.cobertura.xml" "-targetdir:Cobertura" -reporttypes:"HTML" "-filefilters:-**/Program.cs;-**/WeatherForecast.cs"
+    - name: Deploy coverage report to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: EcommerceApp/Cobertura
+        destination_dir: Cobertura
+        keep_files: true 

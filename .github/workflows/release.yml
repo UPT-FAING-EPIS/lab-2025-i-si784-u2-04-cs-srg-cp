@@ -1,0 +1,41 @@
+name: Actividad - 5 | Release NuGet Package
+env:
+  DOTNET_VERSION: '8.0' # la versión de .NET
+on: push
+
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+        
+      - name: Restore dependencies && Build solution
+        run: |
+          cd EcommerceApp
+          dotnet restore
+          dotnet build --configuration Release
+
+      - name: Pack NuGet package
+        run: |
+          dotnet pack EcommerceApp/EcommerceApp.Api/EcommerceApp.Api.csproj -c Release \
+            -p:PackageVersion=202.207.3503 \
+            -p:RepositoryUrl=https://github.com/${{ github.repository }} \
+            -p:RepositoryType=git
+#        dotnet pack MyMath/Math.Lib/Math.Lib.csproj -c Release -p:PackageVersion=202.207.3503
+      - name: NuGet sources
+        run: dotnet nuget list source
+      - name: Push NuGet package to GitHub Packages
+        run: dotnet nuget push EcommerceApp/EcommerceApp.Api/bin/Release/*.nupkg --skip-duplicate --source "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json" --api-key ${{ secrets.PACKAGE_NUGET }}
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v2022073503
+          name: Release v2022073503
+          files: "**/*.nupkg"
