@@ -1,5 +1,7 @@
 namespace EcommerceApp.Tests;
+using System.Diagnostics.CodeAnalysis;
 
+[ExcludeFromCodeCoverage]
 public class Tests
 {
     [SetUp]

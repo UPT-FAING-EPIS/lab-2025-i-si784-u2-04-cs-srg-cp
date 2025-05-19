@@ -1,0 +1,11 @@
+<Project>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute" />
+    <Compile Update="Program.cs">
+      <CoverageExcludeFile>true</CoverageExcludeFile>
+    </Compile>
+    <Compile Update="**/WeatherForecast.cs">
+      <CoverageExcludeFile>true</CoverageExcludeFile>
+    </Compile>
+  </ItemGroup>
+</Project>
